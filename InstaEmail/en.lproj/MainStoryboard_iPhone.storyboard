@@ -1,18 +1,87 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C2034" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--Insta Email View Controller-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="InstaEmailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m8E-3p-bkf">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="InstaEmail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWn-Gw-p5X">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="I'm..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CvV-Ia-aih">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="...and feeling..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wVa-sp-VbV">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BfA-Wx-kwh">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="Oyt-GO-Kwc"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="2" id="41y-xU-bKA"/>
+                                    <outlet property="delegate" destination="2" id="WUF-li-vtA"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="...about it." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMD-Es-yTV">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FAM-Kr-YtH">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="send email">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendButtonTapped:" destination="2" eventType="touchUpInside" id="GM9-6K-tuf"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FAM-Kr-YtH" firstAttribute="centerX" secondItem="MMD-Es-yTV" secondAttribute="centerX" type="default" id="2rf-Bq-olo"/>
+                            <constraint firstAttribute="bottom" secondItem="FAM-Kr-YtH" secondAttribute="bottom" constant="48" id="6Hb-TO-vYG"/>
+                            <constraint firstItem="MMD-Es-yTV" firstAttribute="centerX" secondItem="BfA-Wx-kwh" secondAttribute="centerX" type="default" id="7f7-hB-O1c"/>
+                            <constraint firstItem="m8E-3p-bkf" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="-54" id="AFl-RR-28A"/>
+                            <constraint firstItem="iWn-Gw-p5X" firstAttribute="top" secondItem="3" secondAttribute="top" constant="13" id="CD7-Zh-dok"/>
+                            <constraint firstAttribute="trailing" secondItem="wVa-sp-VbV" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="GHo-0h-uKI"/>
+                            <constraint firstItem="BfA-Wx-kwh" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="TjZ-nM-EDb"/>
+                            <constraint firstItem="MMD-Es-yTV" firstAttribute="top" secondItem="BfA-Wx-kwh" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="hMg-Vo-uxm"/>
+                            <constraint firstItem="BfA-Wx-kwh" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="lwj-s9-Wyx"/>
+                            <constraint firstItem="m8E-3p-bkf" firstAttribute="top" secondItem="3" secondAttribute="top" constant="100" id="qHX-1z-87x"/>
+                            <constraint firstItem="CvV-Ia-aih" firstAttribute="top" secondItem="3" secondAttribute="top" constant="67" id="qPF-bG-ePN"/>
+                            <constraint firstItem="BfA-Wx-kwh" firstAttribute="centerX" secondItem="iWn-Gw-p5X" secondAttribute="centerX" type="default" id="teD-SY-THY"/>
+                            <constraint firstItem="wVa-sp-VbV" firstAttribute="baseline" secondItem="CvV-Ia-aih" secondAttribute="baseline" type="default" id="uUh-S1-pJt"/>
+                            <constraint firstItem="BfA-Wx-kwh" firstAttribute="top" secondItem="CvV-Ia-aih" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="xG2-5d-mDl"/>
+                            <constraint firstItem="CvV-Ia-aih" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="yUZ-BG-dXe"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailPicker" destination="BfA-Wx-kwh" id="Cry-ev-HiY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>

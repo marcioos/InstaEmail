@@ -7,7 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MFMailComposeViewController.h>
 
 @interface InstaEmailViewController : UIViewController
+<UIPickerViewDataSource, UIPickerViewDelegate, MFMailComposeViewControllerDelegate> {
+    UIPickerView* emailPicker_;
+    NSArray* activities_;
+    NSArray* feelings_;
+}
+
+@property (nonatomic, retain) IBOutlet UIPickerView *emailPicker;
+
+- (IBAction)sendButtonTapped:(id)sender;
 
 @end

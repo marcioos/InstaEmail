@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7057150816F156ED00B277AC /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7057150716F156ED00B277AC /* MessageUI.framework */; };
+		7057150A16F1571200B277AC /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7057150916F1571200B277AC /* MessageUI.framework */; };
 		707E56E816D590F600BD1E61 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 707E56E716D590F600BD1E61 /* UIKit.framework */; };
 		707E56EA16D590F600BD1E61 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 707E56E916D590F600BD1E61 /* Foundation.framework */; };
 		707E56EC16D590F600BD1E61 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 707E56EB16D590F600BD1E61 /* CoreGraphics.framework */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7057150716F156ED00B277AC /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		7057150916F1571200B277AC /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		707E56E416D590F600BD1E61 /* InstaEmail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaEmail.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		707E56E716D590F600BD1E61 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		707E56E916D590F600BD1E61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -67,9 +71,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7057150816F156ED00B277AC /* MessageUI.framework in Frameworks */,
 				707E56E816D590F600BD1E61 /* UIKit.framework in Frameworks */,
 				707E56EA16D590F600BD1E61 /* Foundation.framework in Frameworks */,
 				707E56EC16D590F600BD1E61 /* CoreGraphics.framework in Frameworks */,
+				7057150A16F1571200B277AC /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +95,7 @@
 		707E56DB16D590F600BD1E61 = {
 			isa = PBXGroup;
 			children = (
+				7057150716F156ED00B277AC /* MessageUI.framework */,
 				707E56ED16D590F600BD1E61 /* InstaEmail */,
 				707E571416D590F600BD1E61 /* InstaEmailTests */,
 				707E56E616D590F600BD1E61 /* Frameworks */,
@@ -108,6 +115,7 @@
 		707E56E616D590F600BD1E61 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7057150916F1571200B277AC /* MessageUI.framework */,
 				707E56E716D590F600BD1E61 /* UIKit.framework */,
 				707E56E916D590F600BD1E61 /* Foundation.framework */,
 				707E56EB16D590F600BD1E61 /* CoreGraphics.framework */,
@@ -468,6 +476,7 @@
 				707E572116D590F600BD1E61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		707E572216D590F600BD1E61 /* Build configuration list for PBXNativeTarget "InstaEmailTests" */ = {
 			isa = XCConfigurationList;
@@ -476,6 +485,7 @@
 				707E572416D590F600BD1E61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
